@@ -1,5 +1,5 @@
 <ul class="media-list">
-  <% microposts.each do |micropost| %>
+  <% other_user.likes.each do |micropost| %>
     <li class="media">
       <div class="media-left">
         <img class="media-object img-rounded" src="<%= gravatar_url(micropost.user, options = { size: 50 }) %>" alt="">
@@ -20,5 +20,4 @@
       </div>
     </li>
   <% end %>
-  <%= paginate microposts %>
 </ul>

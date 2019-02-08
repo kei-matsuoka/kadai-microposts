@@ -4,4 +4,8 @@ module UsersHelper
     size = options[:size]
     "https://secure.gravatar.com/avatar/#{gravatar_id}?s=#{size}"
   end
+  
+  def other_user
+    @other_user = User.find(params[:id])
+  end
 end
